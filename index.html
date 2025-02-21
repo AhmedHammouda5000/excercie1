@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules\bootstrap\dist\css\bootstrap.min.css">
+    <script src="scripts.js"></script>
+</head>
+<body  onload="setHidden()" class="p-3 mb-2 bg-body-secondary vh-100 d-flex justify-content-center align-items-center text-center">
+
+
+    <form action="">
+        <h1>Jeu de  nombre cachée</h1>
+        <br>
+        <select onchange="setHidden()" class="form-select form-select-lg mb-3" aria-label="Large select example" id ="Liste">
+            
+            <option value="0">Choisir un niveau </option>
+            <option value="1">Facile (10/100)</option>
+            <option value="2">Intermediare(5/100)</option>
+            <option value="3">Difficile(3/100)</option>
+        </select>
+    <input type="button" value="Commencer" class="btn btn-primary" onclick="verifier()">
+<br>
+
+        <br>
+        <div id="ans" ="visibility:hidden;">
+        <div class="input-group input-group-lg" >
+            <span class="input-group-text" id="inputGroup-sizing-lg">Answer</span>
+            <input id="Inp"  type="text" class="form-control" aria-label="Answer"  aria-describedby="inputGroup-sizing-lg">
+        </div>
+        <br>
+        <input type="button" value="Submit" onclick="isWinner()" class="btn btn-dark text-center"></input>
+        <input type="reset" id="bot" onclick="setHidden()" value="Reset Game" class="btn btn-dark text-center">
+    </div>
+    </form>
+    
+</body>
+</html>
